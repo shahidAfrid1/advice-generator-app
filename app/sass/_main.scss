@@ -1,0 +1,70 @@
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $DarkBlue;
+    padding: 50px 15px;
+    text-align: center;
+    .container{
+        position: relative;
+        width: 100%;
+        background-color: $DarkGrayishBlue;
+        border-radius: 10px;
+        padding: 40px 15px;
+        color: $LightCyan;
+
+        @include tbl{
+            width: 450px;
+        }
+
+        @include sml{
+            width: 540px;
+            padding: 50px 33px;
+        }
+        > h1{
+            font-size: 12px;
+            color: $NeonGreen;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+
+        > p{
+            font-size: 24px;
+            margin-bottom: 30px;
+            @include sml{
+                font-size: 28px;
+            }
+        }
+
+        > img{
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .dice{
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: $NeonGreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            top: 90%;
+            left: 40%;
+            &.clicked{
+                opacity: .8;
+            }
+            @include tbl{
+                left: 43%;
+            }
+            @include tbl{
+                left: 44%;
+            }
+            @include lgl{
+                &:hover{
+                    box-shadow: 0px 0px 20px #52ffa8;
+                }
+            }
+        }
+    }
+}
